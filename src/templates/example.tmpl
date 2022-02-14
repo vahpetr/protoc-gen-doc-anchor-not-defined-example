@@ -1,0 +1,7 @@
+{{range .Files}}
+{{$file_name := .Name}}- [{{.Name}}](#{{.Name | anchor}})
+  {{- if .Messages }}
+  {{range .Messages}}  - [{{.LongName}}](#{{.FullName | anchor}})
+  {{end}}
+  {{- end -}}
+{{end}}
